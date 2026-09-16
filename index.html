@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Andrew Kozubal — Mechanical Engineering portfolio: project sheets and independent financial analysis.">
+<meta name="description" content="Andrew Kozubal: Mechanical Engineering portfolio featuring project sheets and independent financial analysis.">
 <title>Engineering Project Sheets</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -411,7 +411,7 @@
     .titleblock{ box-shadow: none; }
     .sheet, .analysis-card{ box-shadow: none; }
 
-    /* Pack tightly — avoid splitting small atomic pieces, but let sections flow across pages naturally instead of forcing a blank-filled page break before each one */
+    /* Pack tightly; avoid splitting small atomic pieces, but let sections flow across pages naturally instead of forcing a blank-filled page break before each one */
     .sheet-header, .case-study, .lesson-box, .metric-tile, .metrics-row,
     .bench-row, figure.photo, figure.diagram, figure.process-diagram,
     .sheet-narrative li, .specs li, jobHeader{
@@ -419,7 +419,7 @@
       page-break-inside: avoid;
     }
 
-    /* Only force a fresh page ahead of the financial-analysis aside, since it's a distinct closing section — everything else packs continuously */
+    /* Only force a fresh page ahead of the financial-analysis aside, since it's a distinct closing section; everything else packs continuously */
     .aside-block{ break-before: page; page-break-before: always; margin-top: 0; }
 
     .intro{ margin: 14px 4px 18px; font-size: 13.5px; }
@@ -461,9 +461,9 @@
 
   <div class="titleblock">
     <div class="titleblock-main">
-      <div class="eyebrow">Project Drawing Set — Rev. Sept 2026</div>
-      <h1>Andrew "Drew" Kozubal</h1>
-      <div class="role">Mechanical Engineering, Messiah University — Class of 2027</div>
+      <div class="eyebrow">Project Drawing Set, Rev. Sept 2026</div>
+      <h1>Andrew Kozubal</h1>
+      <div class="role">Mechanical Engineering, Messiah University, Class of 2027</div>
     </div>
     <div class="titleblock-grid">
       <div class="tb-cell">
@@ -485,7 +485,7 @@
     </div>
   </div>
 
-  <p class="intro">Three projects, three different design problems: a <strong>test stand</strong> built to validate someone else's hardware, a <strong>washing machine</strong> designed from a blank sheet for people with no electricity, and a <strong>software system</strong> built to replace a stack of paper tickets at a moving company. Same process every time — model it, size it, build it, watch it fail, fix it.</p>
+  <p class="intro">Three projects, three different problems: a <strong>test stand</strong> for someone else's hardware, a <strong>washing machine</strong> designed from scratch for people without electricity, and a <strong>software system</strong> that replaced a stack of paper tickets at a moving company. Each project has pushed me through a different part of the engineering process, from modeling and analysis to building, testing, and improving a design.</p>
 
   <div class="sheets">
 
@@ -498,15 +498,15 @@
         </div>
         <div class="sheet-meta">
           <span class="chip chip-live">Live</span>
-          <span class="timeframe">2026 — Present · Founder &amp; Developer</span>
+          <span class="timeframe">2026 to Present · Founder &amp; Developer</span>
         </div>
       </div>
       <div class="sheet-body">
         <div class="sheet-narrative">
-          <p>A moving company runs on a dozen disconnected tools — a spreadsheet for quotes, a group text for scheduling, a separate app for payroll. I built a single multi-tenant platform that carries a job from the first phone call to the final paycheck, with each company's data walled off behind role-based access.</p>
+          <p>A moving company runs on a dozen disconnected tools: a spreadsheet for quotes, a group text for scheduling, a separate app for payroll. I built a single multi-tenant platform that carries a job from the first phone call to the final paycheck, with each company's data walled off behind role-based access.</p>
           <figure class="photo">
             <img src="saas-dashboard.jpg" alt="Screenshot of the platform's Today dashboard, showing jobs scheduled today, today's revenue, missing crew, and truck conflicts summary cards, a today's-jobs panel, quick actions, and a financial snapshot for the week.">
-            <figcaption>The daily operations dashboard — jobs, revenue, staffing gaps, and truck conflicts surfaced at a glance for each company.</figcaption>
+            <figcaption>The daily operations dashboard: jobs, revenue, staffing gaps, and truck conflicts, all surfaced at a glance for each company.</figcaption>
           </figure>
           <figure class="diagram">
             <svg viewBox="0 0 720 210" role="img" aria-label="Diagram showing a job moving automatically from lead intake through quoting, acceptance, job creation, crew scheduling, and payroll, with an AI assist module that reads CRM data and suggests actions but is blocked from acceptance and payroll.">
@@ -564,7 +564,7 @@
                 <text x="360" y="100" fill="var(--accent)" font-style="italic">no pricing / legal access</text>
               </g>
             </svg>
-            <figcaption>A job's path through the system — the AI layer reads activity and recommends next steps, but is walled off from pricing and contract actions.</figcaption>
+            <figcaption>A job's path through the system. The AI layer reads activity and recommends next steps but is walled off from pricing and contract actions.</figcaption>
           </figure>
           <ul>
             <li>Multi-tenant PostgreSQL/Prisma data model with company-level isolation and role-based access control.</li>
@@ -604,10 +604,10 @@
       </div>
       <div class="sheet-body">
         <div class="sheet-narrative">
-          <p>Before you can trust a turbine's numbers, you need a rig that won't lie to you. Our team built on-site and off-site test stands to hold a wind turbine steady under load while we measured how it actually performed — not just how the spec sheet said it would.</p>
+          <p>Our team needed a way to check whether a wind turbine actually performed the way its spec sheet claimed. We built on-site and off-site test stands to hold the turbine steady under load so we could measure its real output.</p>
           <figure class="photo">
             <img src="test-stand.jpg" alt="Assembled wind turbine test stand on a mobile cart, with a variac and drive motor mounted on a wood base, a load bank, wiring routed to a control panel and breaker box on the wall behind, and an oscilloscope and multimeter on the lower shelf.">
-            <figcaption>The finished test stand — motor and load bank on the mobile cart, wired up to the control panel for instrumented load testing.</figcaption>
+            <figcaption>The finished test stand: motor and load bank on the mobile cart, wired to the control panel for instrumented load testing.</figcaption>
           </figure>
           <ul>
             <li>Ran stress calculations and structural analysis to size test-stand components before anything got cut.</li>
@@ -645,11 +645,11 @@
       </div>
       <div class="sheet-body">
         <div class="sheet-narrative">
-          <p>No electricity, no washing machine — that's the constraint the field asked us to design around. I'm leading a subgroup building a manually powered washing machine for refugee communities in Greece, where the deciding factor isn't performance, it's whether a part can be replaced with what's actually on hand.</p>
+          <p>I'm leading a subgroup designing a manually powered washing machine for refugee communities in Greece, where there's no reliable electricity. Performance matters, but so does whether a part can be repaired or replaced with materials people actually have access to there.</p>
           <ul>
             <li>Taking the machine from concept through engineering analysis and SolidWorks CAD, with fabrication and physical testing to follow.</li>
             <li>Designing the drum, shaft, bearings, structural frame, seals, and hand-operated mechanism against strength, manufacturability, cost, and durability.</li>
-            <li>Every material and fastener choice is filtered through one question: can it be sourced and repaired locally after we're gone.</li>
+            <li>Choosing materials and fasteners that can be sourced and repaired locally, since we won't be there to fix it ourselves.</li>
           </ul>
           <span class="site-tag">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
@@ -678,14 +678,14 @@
   </div>
 
   <div class="aside-block">
-    <div class="aside-eyebrow">Outside Engineering — Analytical Interest</div>
+    <div class="aside-eyebrow">BEYOND ENGINEERING: PERSONAL INTEREST</div>
     <div class="analysis-card">
       <div class="analysis-header">
-        <h3>Independent Financial Analysis</h3>
+        <h3>Investing &amp; Financial Analysis</h3>
         <span class="timeframe">~2 years · Personal research, not professional experience</span>
       </div>
       <div class="analysis-body">
-        <p>Outside of coursework and projects, I independently research and manage a personal equity portfolio. It's not investment-management experience — it's the same habit of thinking in systems, weighing evidence, and revising a decision when the data changes, just applied to companies instead of hardware.</p>
+        <p>Investing has become one of my main interests outside engineering. I enjoy figuring out how businesses actually work, reading through financial statements, comparing valuations, and following how industries shift over time. Over the past two years I've built and managed my own portfolio, adjusting my thinking as new information comes in.</p>
 
         <div class="metrics-row">
           <div class="metric-tile">
@@ -771,37 +771,41 @@
           <div class="case-study-head">
             <span class="ticker">PLTR</span>
             <h4>Palantir Technologies</h4>
-            <span class="timeframe" style="font-size:10px;">Figures as of Q2 2026 earnings (reported Aug 2026)</span>
+            <span class="timeframe" style="font-size:10px;">Entered June 2024 &middot; current figures as of Q2 2026 earnings (reported Aug 2026)</span>
           </div>
           <div class="case-grid">
             <div class="case-field">
               <div class="case-field-label">Thesis</div>
-              <p>Believed the market underweighted Palantir's durable government/defense contract base and underestimated how quickly its AIP platform would drive commercial revenue acceleration.</p>
+              <p>I thought the market was underestimating Palantir's government business and how much its new AI platform (AIP) could accelerate commercial growth.</p>
             </div>
             <div class="case-field">
-              <div class="case-field-label">Financials</div>
-              <p>Revenue grew 93% YoY in Q2 2026 (record quarter); ~86% adjusted gross margin; $1.22B adjusted free cash flow (+115% YoY, ~63% FCF margin); $9.2B cash, no debt.</p>
+              <div class="case-field-label">Valuation at Entry</div>
+              <p>I bought around $20 in June 2024. Even then it wasn't a cheap stock, trading at a very high earnings multiple. I wasn't buying it because the valuation looked cheap. I believed the government business was durable and that AIP could grow commercial revenue enough to justify paying a premium.</p>
             </div>
             <div class="case-field">
-              <div class="case-field-label">Valuation</div>
-              <p>Never cheap on traditional multiples (trailing P/E ~148, forward P/E ~92) — the bet was that accelerating growth and margin expansion would justify the multiple rather than the multiple compressing.</p>
+              <div class="case-field-label">What Happened Afterward</div>
+              <p>The business accelerated after I bought in. Q2 2024 results, reported that August, showed 27% year-over-year revenue growth, with U.S. commercial revenue up 55%, U.S. government revenue up 24%, and customer count up 41%. They also had about $4.0B in cash and short-term treasuries. That gave me more evidence the commercial AI thesis was playing out, so I kept holding.</p>
             </div>
             <div class="case-field">
               <div class="case-field-label">Competitive Position</div>
-              <p>Ontology-based data integration creates high switching costs once embedded in a customer's workflow; sticky long-term government contracts; early mover in operational AI for defense and enterprise.</p>
+              <p>Once a customer builds their workflow around Palantir's ontology system, it's hard and expensive to switch away from, so I think they have real staying power there. They also had long, sticky government contracts and got into operational AI for defense and enterprise early.</p>
             </div>
             <div class="case-field">
               <div class="case-field-label">Risks Identified</div>
-              <p>Premium valuation vulnerable to multiple compression; revenue concentration in government/defense; heavy stock-based compensation; execution risk on the commercial-growth thesis.</p>
+              <p>The stock is priced for a lot to keep going right, so if growth ever slows there's a real risk of the multiple getting cut. Government contracts remain a major part of the business, they use a lot of stock-based compensation, and the commercial growth story still has to keep playing out.</p>
             </div>
             <div class="case-field">
               <div class="case-field-label">Decision</div>
-              <p>Bought and held through volatility rather than trimming on valuation concerns, betting that fundamentals would keep validating the thesis.</p>
+              <p>I held through the swings instead of selling on valuation worries, because I was betting the fundamentals would keep proving the thesis right.</p>
             </div>
           </div>
           <div class="case-field" style="margin-top:10px;">
             <div class="case-field-label">Outcome</div>
-            <p>Entry at ~$20/share; fundamentals (revenue growth, FCF generation) have validated the original thesis so far, though the stretched valuation remains a risk I'm actively monitoring rather than a settled question.</p>
+            <p>I got in around $20 a share. The fundamentals since then, revenue growth and free cash flow, have backed up what I believed going in, but the valuation is stretched enough that I'm still watching it closely rather than treating this as settled.</p>
+          </div>
+          <div class="case-field" style="margin-top:10px;">
+            <div class="case-field-label">Current &mdash; Q2 2026</div>
+            <p>Revenue up 93% year over year. Gross margin around 86%. $1.22B in adjusted free cash flow, up 115% year over year, with a 63% FCF margin. $9.2B in cash and short-term U.S. Treasuries.</p>
           </div>
         </div>
 
@@ -814,11 +818,11 @@
           <div class="case-grid">
             <div class="case-field">
               <div class="case-field-label">Thesis &amp; Decision</div>
-              <p>Bought at $20 on a turnaround/value bet — believed the market had oversold Intel relative to its foundry buildout and government manufacturing support. Sold at $60 to lock in a 3x gain rather than risk giving it back.</p>
+              <p>I bought at $20 as a turnaround bet. I thought the market had sold Intel off too hard given how much they were investing in their foundry business and the government support behind U.S. chip manufacturing. I sold at $60 to lock in a 3x gain instead of risking giving that back.</p>
             </div>
             <div class="case-field">
               <div class="case-field-label">What Happened</div>
-              <p>The turnaround thesis kept playing out further than I underwrote — the stock has continued climbing well past my exit. I optimized for locking in a gain instead of re-underwriting the thesis against updated fundamentals before selling.</p>
+              <p>The turnaround kept going further than I expected. The stock kept climbing well past where I sold. Looking back, I made the call to sell based on protecting the gain instead of going back and checking whether the fundamentals still supported holding it.</p>
             </div>
           </div>
         </div>
