@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Andrew Kozubal: Mechanical Engineering portfolio featuring project work and independent financial analysis.">
+<title>Andrew Kozubal</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --ink: #1c2024;
+    --ink-soft: #5b6570;
+    --bg: #fbfbfa;
+    --accent: #2f5d8a;
+    --rule: #e3e2df;
+  }
+  *{ box-sizing: border-box; }
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap{ max-width: 760px; margin: 0 auto; padding: 56px 24px 80px; }
+
+  header.top{ margin-bottom: 40px; }
+  header.top h1{
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  header.top .role{
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin-bottom: 6px;
+  }
+  header.top .tagline{
+    font-size: 14px;
+    color: var(--accent);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 22px;
+  }
+  nav.primary{
+    display: flex;
+    gap: 22px;
+    font-size: 14.5px;
+    font-weight: 500;
+    margin-bottom: 18px;
+  }
+  nav.primary a{ color: var(--ink); text-decoration: none; border-bottom: 1px solid transparent; }
+  nav.primary a:hover{ color: var(--accent); border-bottom-color: var(--accent); }
+  .contact-line{
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  .contact-line a{ color: var(--accent); text-decoration: none; }
+  .contact-line a:hover{ text-decoration: underline; }
+  .contact-line .sep{ margin: 0 8px; color: var(--rule); }
+
+  .intro{
+    font-size: 17px;
+    color: var(--ink);
+    max-width: 66ch;
+    margin: 28px 0 0;
+  }
+
+  .divider{
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 56px 0;
+  }
+
+  h2.section-heading{
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 28px;
+  }
+
+  article.project{ margin-bottom: 64px; }
+  article.project:last-child{ margin-bottom: 0; }
+  article.project h3{
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 4px;
+  }
+  article.project .meta{
+    font-size: 13.5px;
+    color: var(--ink-soft);
+    margin-bottom: 18px;
+  }
+  article.project figure{ margin: 0 0 18px; }
+  article.project figure img{
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+  }
+  article.project figcaption{
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 8px;
+    font-style: italic;
+  }
+  article.project p{ margin: 0 0 14px; }
+  article.project ul{ margin: 0 0 14px; padding-left: 20px; }
+  article.project li{ margin-bottom: 6px; }
+  .stack-line{ font-size: 14px; color: var(--ink-soft); }
+  .stack-line strong{ color: var(--ink); font-weight: 600; }
+  .diagram-figure{ margin: 22px 0; }
+  .diagram-figure svg{ width: 100%; height: auto; color: var(--ink-soft); }
+  .status-tag{
+    display: inline-block;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 10px;
+  }
+
+  .about p{ max-width: 66ch; margin: 0 0 20px; }
+  .about ul.simple-list{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+    font-size: 15.5px;
+  }
+  .about ul.simple-list li{
+    padding: 8px 0;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .about ul.simple-list li span.org{ font-weight: 600; }
+  .about ul.simple-list li span.dates{ color: var(--ink-soft); font-size: 14px; }
+  .about .resume-link{
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+  }
+
+  .outside{ margin-top: 8px; }
+  .outside h2.section-heading{ color: var(--ink-soft); }
+  .outside .oe-title{ font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+  .outside .oe-meta{ font-size: 13px; color: var(--ink-soft); margin-bottom: 16px; }
+  .outside p{ max-width: 66ch; margin: 0 0 16px; font-size: 15px; }
+  .outside .metrics-line{
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    padding: 10px 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    margin: 0 0 24px;
+  }
+  .case{ margin-bottom: 26px; }
+  .case .case-head{
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+  .case .ticker{
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    font-weight: 500;
+    background: color-mix(in srgb, var(--accent) 10%, transparent);
+    color: var(--accent);
+    padding: 2px 7px;
+    border-radius: 3px;
+  }
+  .case h4{ font-size: 16px; font-weight: 700; margin: 0; }
+  .case .lesson-tag{
+    font-size: 11.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #a15c1f;
+    letter-spacing: 0.03em;
+  }
+  .case p{ font-size: 14.5px; margin: 0 0 10px; max-width: 70ch; }
+  .disclaimer{ font-size: 12.5px; color: var(--ink-soft); margin-top: 20px; }
+
+  footer.site{
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    font-size: 14px;
+    color: var(--ink-soft);
+  }
+  footer.site a{ color: var(--accent); text-decoration: none; }
+  footer.site a:hover{ text-decoration: underline; }
+
+  @media (max-width: 600px){
+    .wrap{ padding: 36px 18px 60px; }
+    header.top h1{ font-size: 26px; }
+    nav.primary{ flex-wrap: wrap; gap: 14px; }
+    .about ul.simple-list li{ flex-direction: column; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <h1>Andrew Kozubal</h1>
+    <div class="role">Mechanical Engineering Student at Messiah University</div>
+    <div class="tagline">Design &middot; Analysis &middot; Prototyping &middot; Testing</div>
+    <nav class="primary">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="resume.pdf" target="_blank" rel="noopener">R&eacute;sum&eacute;</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="contact-line">
+      <a href="mailto:drewakozubal@gmail.com">drewakozubal@gmail.com</a>
+      <span class="sep">&middot;</span>
+      <a href="https://www.linkedin.com/in/drew-kozubal-2a1540330" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep">&middot;</span>
+      <a href="resume.pdf" target="_blank" rel="noopener">Download R&eacute;sum&eacute;</a>
+    </div>
+  </header>
+
+  <p class="intro">Three projects, three different problems: a washing machine designed from scratch for people without electricity, a test stand for someone else's hardware, and a software system that replaced a stack of paper tickets at a moving company. Each project has pushed me through a different part of the engineering process, from modeling and analysis to building, testing, and improving a design.</p>
+
+  <hr class="divider">
+
+  <section id="projects">
+    <h2 class="section-heading">Projects</h2>
+
+    <!-- MANUAL WASHING MACHINE -->
+    <article class="project">
+      <span class="status-tag">In Progress</span>
+      <h3>Manual Washing Machine</h3>
+      <div class="meta">Senior Year &middot; Collaborative Engineering, Messiah University &middot; Field site: Greece</div>
+
+      <!-- Hero image slot: drop in the SolidWorks assembly screenshot here as <figure><img src="washer-cad.jpg" ...></figure> once ready. Intentionally left as text-first until that asset exists. -->
+
+      <p>I'm leading a subgroup designing a manually powered washing machine for refugee communities in Greece, where there's no reliable electricity. Performance matters, but so does whether a part can be repaired or replaced with materials people actually have access to there.</p>
+      <ul>
+        <li>Taking the machine from concept through engineering analysis and SolidWorks CAD, with fabrication and physical testing to follow.</li>
+        <li>Designing the drum, shaft, bearings, structural frame, seals, and hand-operated mechanism against strength, manufacturability, cost, and durability.</li>
+        <li>Choosing materials and fasteners that can be sourced and repaired locally, since we won't be there to fix it ourselves.</li>
+      </ul>
+      <p class="stack-line"><strong>Subsystems:</strong> drum, shaft &amp; bearings, structural frame, seals, hand-operated mechanism. <strong>Design drivers:</strong> no electricity required, local materials only, field maintainable.</p>
+    </article>
+
+    <!-- WIND TURBINE TEST STAND -->
+    <article class="project">
+      <h3>Wind Turbine Test Stand</h3>
+      <div class="meta">Junior Year &middot; Collaborative Engineering, Messiah University</div>
+      <figure>
+        <img src="test-stand.jpg" alt="Assembled wind turbine test stand on a mobile cart, with a variac and drive motor mounted on a wood base, a load bank, wiring routed to a control panel and breaker box on the wall behind, and an oscilloscope and multimeter on the lower shelf.">
+        <figcaption>The finished test stand: motor and load bank on the mobile cart, wired to the control panel for instrumented load testing.</figcaption>
+      </figure>
+      <p>Our team needed a way to check whether a wind turbine actually performed the way its spec sheet claimed. We built on-site and off-site test stands to hold the turbine steady under load so we could measure its real output.</p>
+      <ul>
+        <li>Ran stress calculations and structural analysis to size test-stand components before anything got cut.</li>
+        <li>Modeled every component and assembly in SolidWorks, then fabricated and assembled the physical stands.</li>
+        <li>Instrumented the rig and ran system tests, troubleshooting both the mechanical mounting and the turbine's electrical output as issues came up.</li>
+      </ul>
+    </article>
+
+    <!-- MOVING OPERATIONS PLATFORM -->
+    <article class="project">
+      <h3>Moving Operations Platform</h3>
+      <div class="meta">2026 to Present &middot; Founder &amp; Developer &middot; Live</div>
+      <figure>
+        <img src="saas-dashboard.jpg" alt="Screenshot of the platform's Today dashboard, showing jobs scheduled today, today's revenue, missing crew, and truck conflicts summary cards, a today's-jobs panel, quick actions, and a financial snapshot for the week.">
+        <figcaption>The daily operations dashboard: jobs, revenue, staffing gaps, and truck conflicts, all surfaced at a glance for each company.</figcaption>
+      </figure>
+      <p>A moving company runs on a dozen disconnected tools: a spreadsheet for quotes, a group text for scheduling, a separate app for payroll. I built a single multi-tenant platform that carries a job from the first phone call to the final paycheck, with each company's data walled off behind role-based access.</p>
+
+      <figure class="diagram-figure">
+        <svg viewBox="0 0 720 210" role="img" aria-label="Diagram showing a job moving automatically from lead intake through quoting, acceptance, job creation, crew scheduling, and payroll, with an AI assist module that reads CRM data and suggests actions but is blocked from acceptance and payroll.">
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+            </marker>
+          </defs>
+          <g font-family="IBM Plex Mono, monospace" font-size="11">
+            <g stroke="currentColor" stroke-width="1.2" fill="none">
+              <rect x="10" y="20" width="100" height="40" rx="3"/>
+              <rect x="150" y="20" width="100" height="40" rx="3"/>
+              <rect x="290" y="20" width="110" height="40" rx="3"/>
+              <rect x="440" y="20" width="100" height="40" rx="3"/>
+              <rect x="580" y="20" width="130" height="40" rx="3"/>
+            </g>
+            <g text-anchor="middle" fill="currentColor">
+              <text x="60" y="44">Lead intake</text>
+              <text x="200" y="44">Quoting</text>
+              <text x="345" y="38">Customer</text>
+              <text x="345" y="52">acceptance</text>
+              <text x="490" y="44">Job created</text>
+              <text x="645" y="38">Crew sched.</text>
+              <text x="645" y="52">+ payroll</text>
+            </g>
+            <g stroke="currentColor" stroke-width="1.2" marker-end="url(#arrow)">
+              <line x1="110" y1="40" x2="147" y2="40"/>
+              <line x1="250" y1="40" x2="287" y2="40"/>
+              <line x1="400" y1="40" x2="437" y2="40"/>
+              <line x1="540" y1="40" x2="577" y2="40"/>
+            </g>
+            <rect x="245" y="130" width="150" height="46" rx="3" stroke="currentColor" stroke-width="1.2" fill="none" stroke-dasharray="4 3"/>
+            <text x="320" y="150" text-anchor="middle" fill="currentColor">AI sales</text>
+            <text x="320" y="164" text-anchor="middle" fill="currentColor">assist</text>
+            <path d="M60,60 C60,110 245,145 245,150" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+            <text x="80" y="105" fill="currentColor" font-style="italic">reads CRM activity</text>
+            <path d="M395,150 C460,140 490,90 490,62" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#arrow)"/>
+            <text x="420" y="115" fill="currentColor" font-style="italic">suggests next action</text>
+            <g stroke="var(--accent)" fill="var(--accent)">
+              <line x1="345" y1="60" x2="345" y2="128" stroke-width="1.3" stroke-dasharray="2 3"/>
+              <line x1="335" y1="90" x2="355" y2="104" stroke-width="1.6"/>
+              <line x1="355" y1="90" x2="335" y2="104" stroke-width="1.6"/>
+            </g>
+            <text x="360" y="100" fill="var(--accent)" font-style="italic">no pricing / legal access</text>
+          </g>
+        </svg>
+        <figcaption>A job's path through the system. The AI layer reads activity and recommends next steps but is walled off from pricing and contract actions.</figcaption>
+      </figure>
+
+      <ul>
+        <li>Multi-tenant PostgreSQL/Prisma data model with company-level isolation and role-based access control.</li>
+        <li>Automated the handoff between sales, scheduling, and payroll so a booked job creates its own crew assignment and pay record.</li>
+        <li>Integrated mapping/travel-time, email, and payment-processing APIs into one workflow.</li>
+        <li>Automated testing covering authentication, cross-company data isolation, and API endpoints before each production deploy.</li>
+      </ul>
+      <p class="stack-line"><strong>Stack:</strong> Next.js/TypeScript, PostgreSQL + Prisma, Vercel + Neon, REST APIs, AI/LLM integration. <strong>Results:</strong> crew size grew from 3 to 5, revenue grew roughly 1.5&times; month over month, with dev/preview/prod environments on Git CI.</p>
+    </article>
+
+  </section>
+
+  <hr class="divider">
+
+  <section id="about" class="about">
+    <h2 class="section-heading">About</h2>
+    <p>I'm a senior at Messiah University studying mechanical engineering, graduating in 2027. Most of what I know I've learned by building things, test stands, CAD assemblies, and lately software, then finding out what breaks and fixing it. I'm also a varsity wrestler, and outside of school and projects I spend a lot of time thinking about how businesses work, which is what the section below is about.</p>
+    <ul class="simple-list">
+      <li><span class="org">Messiah University &mdash; B.S. Mechanical Engineering</span> <span class="dates">Expected 2027</span></li>
+      <li><span class="org">Cav Movers &mdash; Operations Manager</span> <span class="dates">2021&ndash;2026</span></li>
+      <li><span class="org">Moving Operations SaaS Platform &mdash; Founder &amp; Developer</span> <span class="dates">2026&ndash;Present</span></li>
+    </ul>
+    <a class="resume-link" href="resume.pdf" target="_blank" rel="noopener">Download R&eacute;sum&eacute; (PDF)</a>
+  </section>
+
+  <hr class="divider">
+
+  <section class="outside">
+    <h2 class="section-heading">Outside Engineering</h2>
+    <div class="oe-title">Investing &amp; Financial Analysis</div>
+    <div class="oe-meta">~2 years &middot; Personal research, not professional experience</div>
+
+    <p>Investing has become one of my main interests outside engineering. I enjoy figuring out how businesses actually work, reading through financial statements, comparing valuations, and following how industries shift over time. Over the past two years I've built and managed my own portfolio, adjusting my thinking as new information comes in.</p>
+
+    <div class="metrics-line">Roughly $40K portfolio value &middot; 11+ holdings researched &middot; +92.95% return over about two years, versus the S&amp;P 500's +34.1% over the same period (price return, approximate start date, excludes dividends)</div>
+
+    <figure class="diagram-figure">
+      <svg viewBox="0 0 720 130" role="img" aria-label="Flow diagram: Company and industry research leads to financial statements, then valuation, then competitive position, then risk assessment, then investment decision, then ongoing monitoring, which loops back to research.">
+        <defs>
+          <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0,0 L10,5 L0,10 z" fill="currentColor"/>
+          </marker>
+        </defs>
+        <g font-family="IBM Plex Mono, monospace" font-size="9.5">
+          <g stroke="currentColor" stroke-width="1" fill="none">
+            <rect x="4" y="18" width="98" height="34" rx="2"/>
+            <rect x="122" y="18" width="98" height="34" rx="2"/>
+            <rect x="240" y="18" width="88" height="34" rx="2"/>
+            <rect x="348" y="18" width="112" height="34" rx="2"/>
+            <rect x="480" y="18" width="98" height="34" rx="2"/>
+            <rect x="598" y="18" width="118" height="34" rx="2"/>
+          </g>
+          <g text-anchor="middle" fill="currentColor">
+            <text x="53" y="33">Company /</text>
+            <text x="53" y="45">industry research</text>
+            <text x="171" y="33">Financial</text>
+            <text x="171" y="45">statements</text>
+            <text x="284" y="39">Valuation</text>
+            <text x="404" y="33">Competitive</text>
+            <text x="404" y="45">position</text>
+            <text x="529" y="33">Risk</text>
+            <text x="529" y="45">assessment</text>
+            <text x="657" y="33">Investment</text>
+            <text x="657" y="45">decision</text>
+          </g>
+          <g stroke="currentColor" stroke-width="1" marker-end="url(#arrow2)">
+            <line x1="102" y1="35" x2="119" y2="35"/>
+            <line x1="220" y1="35" x2="237" y2="35"/>
+            <line x1="328" y1="35" x2="345" y2="35"/>
+            <line x1="460" y1="35" x2="477" y2="35"/>
+            <line x1="578" y1="35" x2="595" y2="35"/>
+          </g>
+          <rect x="240" y="86" width="140" height="30" rx="2" stroke="currentColor" stroke-width="1" fill="none"/>
+          <text x="310" y="105" text-anchor="middle" fill="currentColor">Ongoing monitoring</text>
+          <path d="M657,52 C657,100 380,101 380,101" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#arrow2)"/>
+          <path d="M240,101 C120,101 53,90 53,55" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3 3" marker-end="url(#arrow2)"/>
+        </g>
+      </svg>
+    </figure>
+
+    <div class="case">
+      <div class="case-head">
+        <span class="ticker">PLTR</span>
+        <h4>Palantir Technologies</h4>
+      </div>
+      <p><strong>Thesis:</strong> I thought the market was underestimating Palantir's government business and how much its new AI platform (AIP) could accelerate commercial growth.</p>
+      <p><strong>Valuation at Entry:</strong> I bought around $20 in June 2024. Even then it wasn't a cheap stock, trading at a very high earnings multiple. I wasn't buying it because the valuation looked cheap. I believed the government business was durable and that AIP could grow commercial revenue enough to justify paying a premium.</p>
+      <p><strong>What Happened Afterward:</strong> The business accelerated after I bought in. Q2 2024 results, reported that August, showed 27% year-over-year revenue growth, with U.S. commercial revenue up 55%, U.S. government revenue up 24%, and customer count up 41%. They also had about $4.0B in cash and short-term treasuries. That gave me more evidence the commercial AI thesis was playing out, so I kept holding.</p>
+      <p><strong>Competitive Position:</strong> Once a customer builds their workflow around Palantir's ontology system, it's hard and expensive to switch away from, so I think they have real staying power there. They also had long, sticky government contracts and got into operational AI for defense and enterprise early.</p>
+      <p><strong>Risks:</strong> The stock is priced for a lot to keep going right, so if growth ever slows there's a real risk of the multiple getting cut. Government contracts remain a major part of the business, they use a lot of stock-based compensation, and the commercial growth story still has to keep playing out.</p>
+      <p><strong>Decision:</strong> I held through the swings instead of selling on valuation worries, because I was betting the fundamentals would keep proving the thesis right.</p>
+      <p><strong>Outcome:</strong> I got in around $20 a share. The fundamentals since then, revenue growth and free cash flow, have backed up what I believed going in, but the valuation is stretched enough that I'm still watching it closely rather than treating this as settled.</p>
+      <p><strong>Current (Q2 2026):</strong> Revenue up 93% year over year. Gross margin around 86%. $1.22B in adjusted free cash flow, up 115% year over year, with a 63% FCF margin. $9.2B in cash and short-term U.S. Treasuries.</p>
+    </div>
+
+    <div class="case">
+      <div class="case-head">
+        <span class="ticker">INTC</span>
+        <h4>Intel Corporation</h4>
+        <span class="lesson-tag">What I Got Wrong</span>
+      </div>
+      <p><strong>Thesis &amp; Decision:</strong> I bought at $20 as a turnaround bet. I thought the market had sold Intel off too hard given how much they were investing in their foundry business and the government support behind U.S. chip manufacturing. I sold at $60 to lock in a 3x gain instead of risking giving that back.</p>
+      <p><strong>What Happened:</strong> The turnaround kept going further than I expected. The stock kept climbing well past where I sold. Looking back, I made the call to sell based on protecting the gain instead of going back and checking whether the fundamentals still supported holding it.</p>
+    </div>
+
+    <p class="disclaimer">Personal portfolio performance shown for demonstration of independent financial analysis; not investment advice.</p>
+  </section>
+
+  <footer class="site" id="contact">
+    <a href="mailto:drewakozubal@gmail.com">drewakozubal@gmail.com</a>
+    <span class="sep">&middot;</span>
+    <a href="https://www.linkedin.com/in/drew-kozubal-2a1540330" target="_blank" rel="noopener">LinkedIn</a>
+    <span class="sep">&middot;</span>
+    <a href="resume.pdf" target="_blank" rel="noopener">R&eacute;sum&eacute;</a>
+  </footer>
+
+</div>
+</body>
+</html>
