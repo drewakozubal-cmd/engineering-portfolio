@@ -20,7 +20,7 @@
     margin: 0;
     background: var(--bg);
     color: var(--ink);
-    font-family: "IBM Plex Sans", system-ui, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     font-size: 16px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -167,6 +167,48 @@
     border-bottom: 1px solid var(--rule);
     margin: 0 0 24px;
   }
+  .benchmark{ margin: 0 0 28px; }
+  .benchmark .bench-label{
+    font-size: 12.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    margin-bottom: 10px;
+  }
+  .bench-row{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .bench-row-label{
+    width: 84px;
+    flex-shrink: 0;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .bench-track{
+    flex: 1;
+    height: 10px;
+    background: var(--rule);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .bench-fill{
+    height: 100%;
+    background: var(--accent);
+    border-radius: 3px;
+  }
+  .bench-value{
+    width: 62px;
+    flex-shrink: 0;
+    text-align: right;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .bench-note{ font-size: 12px; color: var(--ink-soft); margin: -2px 0 24px; }
+
   .case{ margin-bottom: 26px; }
   .case .case-head{
     display: flex;
@@ -365,7 +407,22 @@
 
     <p>Investing has become one of my main interests outside engineering. I enjoy figuring out how businesses actually work, reading through financial statements, comparing valuations, and following how industries shift over time. Over the past two years I've built and managed my own portfolio, adjusting my thinking as new information comes in.</p>
 
-    <div class="metrics-line">Roughly $40K portfolio value &middot; 11+ holdings researched &middot; +92.95% return over about two years, versus the S&amp;P 500's +34.1% over the same period (price return, approximate start date, excludes dividends)</div>
+    <div class="metrics-line">11+ companies researched &middot; +92.95% return &middot; ~2 years investing</div>
+
+    <div class="benchmark">
+      <div class="bench-label">Performance vs. S&amp;P 500 (same period)</div>
+      <div class="bench-row">
+        <span class="bench-row-label">Portfolio</span>
+        <div class="bench-track"><div class="bench-fill" style="width:100%"></div></div>
+        <span class="bench-value">+92.95%</span>
+      </div>
+      <div class="bench-row">
+        <span class="bench-row-label">S&amp;P 500</span>
+        <div class="bench-track"><div class="bench-fill" style="width:36.7%; background:var(--ink-soft);"></div></div>
+        <span class="bench-value">+34.1%*</span>
+      </div>
+    </div>
+    <p class="bench-note">*S&amp;P 500 price return, Oct 1, 2024 &ndash; present (approximate start date; excludes dividends).</p>
 
     <figure class="diagram-figure">
       <svg viewBox="0 0 720 130" role="img" aria-label="Flow diagram: Company and industry research leads to financial statements, then valuation, then competitive position, then risk assessment, then investment decision, then ongoing monitoring, which loops back to research.">
