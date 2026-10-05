@@ -6,7 +6,7 @@
 <meta name="description" content="Andrew Kozubal: Mechanical Engineering portfolio featuring project work and independent financial analysis.">
 <title>Andrew Kozubal</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   :root{
     --ink: #1c2024;
@@ -127,6 +127,14 @@
     letter-spacing: 0.04em;
     margin-bottom: 10px;
   }
+  .project-sub{
+    font-size: 12.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--ink-soft);
+    margin: 20px 0 6px;
+  }
 
   .about p{ max-width: 66ch; margin: 0 0 20px; }
   .about ul.simple-list{
@@ -167,6 +175,7 @@
     border-bottom: 1px solid var(--rule);
     margin: 0 0 24px;
   }
+
   .benchmark{ margin: 0 0 28px; }
   .benchmark .bench-label{
     font-size: 12.5px;
@@ -289,15 +298,23 @@
       <h3>Manual Washing Machine</h3>
       <div class="meta">Senior Year &middot; Collaborative Engineering, Messiah University &middot; Field site: Greece</div>
 
-      <!-- Hero image slot: drop in the SolidWorks assembly screenshot here as <figure><img src="washer-cad.jpg" ...></figure> once ready. Intentionally left as text-first until that asset exists. -->
+      <figure>
+        <img src="washer-cad.png" alt="SolidWorks assembly of a manually powered washing machine: a horizontal perforated inner drum inside a transparent outer enclosure, supported by a steel frame, with a bearing-supported shaft and hand crank on the right side.">
+      </figure>
 
-      <p>I'm leading a subgroup designing a manually powered washing machine for refugee communities in Greece, where there's no reliable electricity. Performance matters, but so does whether a part can be repaired or replaced with materials people actually have access to there.</p>
-      <ul>
-        <li>Taking the machine from concept through engineering analysis and SolidWorks CAD, with fabrication and physical testing to follow.</li>
-        <li>Designing the drum, shaft, bearings, structural frame, seals, and hand-operated mechanism against strength, manufacturability, cost, and durability.</li>
-        <li>Choosing materials and fasteners that can be sourced and repaired locally, since we won't be there to fix it ourselves.</li>
-      </ul>
-      <p class="stack-line"><strong>Subsystems:</strong> drum, shaft &amp; bearings, structural frame, seals, hand-operated mechanism. <strong>Design drivers:</strong> no electricity required, local materials only, field maintainable.</p>
+      <div class="project-sub">The Problem</div>
+      <p>Design a manually powered washing machine for refugee communities with limited access to electricity. The current project is focused on deployment in Greece.</p>
+
+      <div class="project-sub">My Role</div>
+      <p>Mechanical design, SolidWorks CAD, component selection, engineering analysis, manufacturability, and cost considerations.</p>
+
+      <div class="project-sub">Current Design</div>
+      <p>The design uses a horizontal perforated inner drum, an outer enclosure, a hand-driven shaft and crank, bearing supports, and a steel support frame. It's being developed around durability, field serviceability, corrosion resistance, safety, low cost, and locally sourceable components.</p>
+
+      <div class="project-sub">Engineering Work</div>
+      <p>Work so far includes shaft and bearing design, loading and stress calculations, drum design, frame design, seals, material selection, and vibration considerations, along with a manufacturability review. Analysis and validation are ongoing, this is still an active senior design project.</p>
+
+      <!-- Future additions to slot in below as they're ready: shaft/bearing CAD close-up, engineering drawing, stress/FEA results, calculations, prototype/testing photos, final design results. -->
     </article>
 
     <!-- WIND TURBINE TEST STAND -->
