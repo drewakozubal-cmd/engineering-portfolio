@@ -162,6 +162,16 @@
     border-bottom: 1px solid var(--accent);
   }
 
+  .project-link{
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent);
+    margin-top: 4px;
+  }
+
   .outside{ margin-top: 8px; }
   .outside h2.section-heading{ color: var(--ink-soft); }
   .outside .oe-title{ font-size: 18px; font-weight: 700; margin: 0 0 4px; }
@@ -314,7 +324,28 @@
       <div class="project-sub">Engineering Work</div>
       <p>Work so far includes shaft and bearing design, loading and stress calculations, drum design, frame design, seals, material selection, and vibration considerations, along with a manufacturability review. Analysis and validation are ongoing, this is still an active senior design project.</p>
 
-      <!-- Future additions to slot in below as they're ready: shaft/bearing CAD close-up, engineering drawing, stress/FEA results, calculations, prototype/testing photos, final design results. -->
+      <div class="project-sub">Overall Assembly and Internal Construction</div>
+      <figure>
+        <img src="washer-assembly.jpg" alt="Side-by-side SolidWorks renders of the washing machine assembly, opaque and transparent, showing the stationary outer drum, perforated rotating inner drum, structural frame, and hand crank.">
+        <figcaption>Opaque and transparent views of the same assembly, showing how the inner drum nests inside the outer drum.</figcaption>
+      </figure>
+      <p>The transparent view shows how the perforated inner drum sits inside the stationary outer drum. The outer drum and support frame stay fixed, while the inner drum rotates on its shaft. The hand crank on the right drives that rotation, and the frame underneath carries the weight of both drums and holds the shaft at the correct height.</p>
+
+      <div class="project-sub">Manual Drive and Bearing Assembly</div>
+      <figure>
+        <img src="washer-shaft.jpg" alt="Exploded SolidWorks view of the drive shaft assembly, showing the inner drum, hub, dual bearings, reinforcement plate, and shaft.">
+        <figcaption>Exploded view of the drive shaft, hub, bearing, and reinforcement plate components.</figcaption>
+      </figure>
+      <p>Turning the hand crank transmits torque through the shaft and a keyed hub to rotate the inner drum. Two bearings, spaced apart along the shaft, support it and react the radial loads from the drum. A reinforcement plate at the drum-to-hub connection helps distribute that load into the drum rather than concentrating it at a single attachment point.</p>
+
+      <div class="project-sub">Loading Door and Sealing Design</div>
+      <figure>
+        <img src="washer-door.jpg" alt="Exploded SolidWorks view of the washer door, showing the outer drum, door lip, and removable washer door.">
+        <figcaption>Exploded view of the removable door relative to the outer drum and door lip.</figcaption>
+      </figure>
+      <p>Laundry is loaded through a removable front door. The door is designed to seal against a rubber gasket mounted around a lip attached to the stationary outer drum, and a lever-style clasp is planned to hold the door in place and compress the gasket. This sealing approach is still under development, and its performance has not yet been experimentally validated.</p>
+
+      <!-- Future additions to slot in below as they're ready: engineering drawing, stress/FEA results, calculations, prototype/testing photos, final design results. -->
     </article>
 
     <!-- WIND TURBINE TEST STAND -->
@@ -398,6 +429,18 @@
         <li>Automated testing covering authentication, cross-company data isolation, and API endpoints before each production deploy.</li>
       </ul>
       <p class="stack-line"><strong>Stack:</strong> Next.js/TypeScript, PostgreSQL + Prisma, Vercel + Neon, REST APIs, AI/LLM integration. <strong>Results:</strong> crew size grew from 3 to 5, revenue grew roughly 1.5&times; month over month, with dev/preview/prod environments on Git CI.</p>
+    </article>
+
+    <!-- STRUCTURAL FRAME DESIGN & FEA -->
+    <article class="project">
+      <h3>Structural Frame Design &amp; Finite Element Analysis</h3>
+      <div class="meta">Mechanical Design Course, Messiah University &middot; October 2026 &middot; Completed Coursework</div>
+      <figure>
+        <img src="frame-isometric.jpg" alt="Isometric SolidWorks model of a tall free-standing steel frame with four vertical legs, horizontal members, and diagonal cross-bracing, built to support an elevated water tank.">
+        <figcaption>Isometric view of the free-standing steel frame designed to support a 1000-L elevated water tank.</figcaption>
+      </figure>
+      <p>Designed and analyzed a free-standing steel frame to support a 1000-L water tank at a height of 9 m, using SolidWorks static frame analysis to check yield and deflection limits before calling the design acceptable.</p>
+      <a class="project-link" href="frame-structural-analysis.html">View full project &rarr;</a>
     </article>
 
   </section>
